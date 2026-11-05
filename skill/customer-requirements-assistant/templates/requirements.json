@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "project": {"title": "填写项目短标题", "industry": "填写行业或场景"},
+  "requirements": [],
+  "questions": [],
+  "conflicts": [],
+  "change_notes": [],
+  "removed_requirement_ids": []
+}

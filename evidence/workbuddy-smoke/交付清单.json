@@ -1,0 +1,48 @@
+{
+  "skill_version": "0.1.0",
+  "created_at": "2026-11-05T05:56:59.343398+00:00",
+  "status": "draft",
+  "word": "generated",
+  "files": [
+    {
+      "name": "待确认问题.md",
+      "sha256": "f1ce3409e42a11dac0b6701cfd970879ef2bf4a53dea2e1c286f39efaea8ddce"
+    },
+    {
+      "name": "来源数据.json",
+      "sha256": "7d07b6b443391b83f15a37c64b7e6412163938e6a85a46667f3d43bec08e1e24"
+    },
+    {
+      "name": "来源索引.md",
+      "sha256": "78d148445b6f70be1736a943bf8d871da75d9d4595be6380687cef9913242091"
+    },
+    {
+      "name": "校验报告.json",
+      "sha256": "9fcbd32975c8fcdbc9238abd8e922ecb1dd74b63938ab63da98db7acf0c69ef7"
+    },
+    {
+      "name": "版本变化.md",
+      "sha256": "0ab6bbd0045fce785d40b9f361350369639acdc0f506cfacc0e82b0a678a6e13"
+    },
+    {
+      "name": "需求数据.json",
+      "sha256": "041e5ab111eb09959f02b8717935517b1a869058549df984bec8faf0cf445a96"
+    },
+    {
+      "name": "需求确认书.docx",
+      "sha256": "4e73e0e5b7d13332ef7dc10c123ceb53ba37f54162d2afba557673a5c60270a4"
+    },
+    {
+      "name": "需求确认书.md",
+      "sha256": "8341b7236d5ccbd45a58d57b9fe4ef2e3c505a4c324274ddff1dd30e12112751"
+    },
+    {
+      "name": "需求追溯表.csv",
+      "sha256": "37db45f398a93ac9ea5da28ed7e728777762868b2c70396b8deced3cedbeb447"
+    }
+  ],
+  "notes": [
+    "需求追溯表CSV、来源数据、需求数据、来源索引和上一版数据是内部工作资料，含完整原文；对外文件也须人工复核。",
+    "结构校验不等于事实或客户确认核验。"
+  ]
+}

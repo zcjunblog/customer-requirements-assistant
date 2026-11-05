@@ -1,0 +1,29 @@
+{
+  "archive_sha256": "743021da6012c2496e7166837e52f4ae9421a2818990ee273080a3a17cf0d0db",
+  "cases": [
+    {
+      "name": "branding",
+      "commands": "ingest/validate/render",
+      "word": "generated",
+      "files": 10
+    },
+    {
+      "name": "event",
+      "commands": "ingest/validate/render",
+      "word": "generated",
+      "files": 10
+    },
+    {
+      "name": "software",
+      "commands": "ingest/validate/render",
+      "word": "generated",
+      "files": 10
+    },
+    {
+      "name": "training",
+      "commands": "ingest/validate/render",
+      "word": "generated",
+      "files": 10
+    }
+  ]
+}

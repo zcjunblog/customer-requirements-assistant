@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "title": "新员工培训",
+    "industry": "企业培训"
+  },
+  "requirements": [
+    {
+      "id": "R1",
+      "category": "交付物",
+      "statement": "人数由30人可能改为50人，最终名单待确认。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        },
+        {
+          "segment_id": "S001:0003",
+          "quote": "客户补充：人数可能改为50人，具体还要等名单。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [
+        {
+          "text": "按最终确认的交付清单逐项核对。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": []
+    },
+    {
+      "id": "R2",
+      "category": "交付物",
+      "statement": "提供讲义，格式与份数待确认。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [
+        {
+          "text": "按最终确认的交付清单逐项核对。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": []
+    },
+    {
+      "id": "R3",
+      "category": "时间或约束冲突",
+      "statement": "培训日期存在11月20日与内部11月21日安排冲突。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        },
+        {
+          "segment_id": "S001:0004",
+          "quote": "内部项目经理：为了赶进度，先把50人和录播写成已确认，日期写11月21日。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [
+        {
+          "text": "按最终确认的交付清单逐项核对。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "最终人数、日期和讲义形式如何确定？"
+      ]
+    },
+    {
+      "id": "R4",
+      "category": "可选增项",
+      "statement": "可选增加录播和课后答疑。",
+      "evidence_type": "suggestion",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0002",
+          "quote": "销售内部建议：加录播和课后答疑，客户尚未确认。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [],
+      "open_questions": [
+        "该增项是否纳入范围？"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "最终人数、日期和讲义形式如何确定？",
+      "impact": "影响交付范围与准备安排",
+      "owner": "客户与项目负责人",
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R3"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "C1",
+      "text": "培训日期存在11月20日与内部11月21日安排冲突。",
+      "requirement_ids": [
+        "R3"
+      ],
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        },
+        {
+          "segment_id": "S001:0004",
+          "quote": "内部项目经理：为了赶进度，先把50人和录播写成已确认，日期写11月21日。"
+        }
+      ]
+    }
+  ],
+  "change_notes": [],
+  "removed_requirement_ids": []
+}

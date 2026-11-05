@@ -1,0 +1,29 @@
+test_confirmation_can_reference_previous_message (test_pipeline.PipelineTests) ... ok
+test_confirmation_needs_evidence_and_suggestion_cannot_be_confirmed (test_pipeline.PipelineTests) ... ok
+test_customer_draft_omits_full_source_quotes (test_pipeline.PipelineTests) ... ok
+test_docx_round_trip (test_pipeline.PipelineTests) ... skipped 'optional python-docx unavailable'
+test_duplicate_and_wrong_type (test_pipeline.PipelineTests) ... ok
+test_empty_and_oversize (test_pipeline.PipelineTests) ... ok
+test_explicit_source_acceptance_needs_quote (test_pipeline.PipelineTests) ... ok
+test_four_industry_fixtures (test_pipeline.PipelineTests) ... ok
+test_ingest_output_never_overwrites (test_pipeline.PipelineTests) ... ok
+test_malformed_conflict_refs (test_pipeline.PipelineTests) ... ok
+test_missing_optional_word_is_explicit (test_pipeline.PipelineTests) ... ok
+test_new_number_rejected (test_pipeline.PipelineTests) ... ok
+test_question_changes_need_revision_note (test_pipeline.PipelineTests) ... ok
+test_reingest_stable_ids (test_pipeline.PipelineTests) ... ok
+test_render_blocks_invalid (test_pipeline.PipelineTests) ... ok
+test_render_nonoverwriting_and_csv_safe (test_pipeline.PipelineTests) ... ok
+test_revision_keeps_old_refs (test_pipeline.PipelineTests) ... ok
+test_revision_removal_and_source_retention (test_pipeline.PipelineTests) ... ok
+test_scanned_pdf_reported (test_pipeline.PipelineTests) ... skipped 'optional pypdf unavailable'
+test_source_required_fields (test_pipeline.PipelineTests) ... ok
+test_sources_and_partial_failure (test_pipeline.PipelineTests) ... ok
+test_title_not_duplicated (test_pipeline.PipelineTests) ... ok
+test_unresolved_conflict_blocks_confirmation (test_pipeline.PipelineTests) ... ok
+test_valid_and_false_quote (test_pipeline.PipelineTests) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.135s
+
+OK (skipped=2)

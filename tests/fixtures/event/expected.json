@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "title": "线下交流活动",
+    "industry": "活动执行"
+  },
+  "requirements": [
+    {
+      "id": "R1",
+      "category": "交付物",
+      "statement": "计划80人交流活动，预算20000元，需要签到台和背景板。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：11月25日办80人交流活动，预算20000元，需要签到台和背景板。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [
+        {
+          "text": "按最终确认的交付清单逐项核对。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": []
+    },
+    {
+      "id": "R2",
+      "category": "交付物",
+      "statement": "场地及搭建撤场时间待确定。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0004",
+          "quote": "客户：场地未最终确定，搭建和撤场时间还没定。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [
+        {
+          "text": "按最终确认的交付清单逐项核对。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": []
+    },
+    {
+      "id": "R3",
+      "category": "时间或约束冲突",
+      "statement": "80人需求与场地60人容量存在冲突。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：11月25日办80人交流活动，预算20000元，需要签到台和背景板。"
+        },
+        {
+          "segment_id": "S001:0003",
+          "quote": "场地方：11月25日场地容纳60人，其他场地待定。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [
+        {
+          "text": "按最终确认的交付清单逐项核对。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "场地与人数如何匹配，搭撤时间和摄影是否另行确认？"
+      ]
+    },
+    {
+      "id": "R4",
+      "category": "可选增项",
+      "statement": "可选增加摄影服务。",
+      "evidence_type": "suggestion",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0002",
+          "quote": "内部建议：增加摄影，先别向客户承诺。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [],
+      "open_questions": [
+        "该增项是否纳入范围？"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "场地与人数如何匹配，搭撤时间和摄影是否另行确认？",
+      "impact": "影响交付范围与准备安排",
+      "owner": "客户与项目负责人",
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R3"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "C1",
+      "text": "80人需求与场地60人容量存在冲突。",
+      "requirement_ids": [
+        "R3"
+      ],
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：11月25日办80人交流活动，预算20000元，需要签到台和背景板。"
+        },
+        {
+          "segment_id": "S001:0003",
+          "quote": "场地方：11月25日场地容纳60人，其他场地待定。"
+        }
+      ]
+    }
+  ],
+  "change_notes": [],
+  "removed_requirement_ids": []
+}

@@ -1,0 +1,60 @@
+{
+  "version": "0.1.0",
+  "archive": "customer-requirements-assistant-0.1.0.zip",
+  "sha256": "743021da6012c2496e7166837e52f4ae9421a2818990ee273080a3a17cf0d0db",
+  "bytes": 23754,
+  "files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "bc2efabe19b2307fa87722e87916a7d78373354690c9b8d5059ad410a4edb9f0"
+    },
+    {
+      "path": "references/industries.md",
+      "sha256": "3d4267f97afeeed6c1669548e007d4457a4d1ddac1d327c034ab42bd5567e71a"
+    },
+    {
+      "path": "references/runtime.md",
+      "sha256": "cb7e8f1a37bb8a2ba11d202775e9c94249de5978efbb25cad6a64cb712b557a3"
+    },
+    {
+      "path": "references/schema.md",
+      "sha256": "4412de5663d407d89dc28eee8275caf10520b9a3d6b93f8c4e9e6e2d5f5ebb7c"
+    },
+    {
+      "path": "requirements-optional.txt",
+      "sha256": "6d926dfacc2e73302213d8b9c738b1f8c9d5a94103e52eec3c57e690ac40d437"
+    },
+    {
+      "path": "scripts/common.py",
+      "sha256": "4cbad7fee1daf92cdbd5e33d825e73b39a57235188be866ef17538cc51555928"
+    },
+    {
+      "path": "scripts/intake.py",
+      "sha256": "4407f373469e01e128e06d6c8b8beba183f5aff387d1c65f86756286b269b7ef"
+    },
+    {
+      "path": "scripts/render.py",
+      "sha256": "99c9287121357acce17c783837379a760170456769d65c9ae0f4bd7e2a5b9042"
+    },
+    {
+      "path": "scripts/requirements_tool.py",
+      "sha256": "c75a5d32ca2f67b1f88657f9e1f40a2e030933d0d74b3e96501cb8d33d94715b"
+    },
+    {
+      "path": "scripts/validate.py",
+      "sha256": "bfd66d7a32701a44b994c107ea34dd9b576b932757580f19045af9d29466c959"
+    },
+    {
+      "path": "templates/requirements.json",
+      "sha256": "4a881f08c8fe0a6a6ea56e7602a52ec38c95a5eb3c300885df8b83fb61f881cf"
+    },
+    {
+      "path": "templates/training-example.json",
+      "sha256": "79eff426c1518d86c98f0325ec6bb08c8d694830372959e5d30af3f00f6b5dc1"
+    },
+    {
+      "path": "templates/training-input.txt",
+      "sha256": "41a9325a1bd5c448bbe1066638caf2167b9504797a5103eebf7e223415029c30"
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "title": "新员工半天培训需求确认草稿",
+    "industry": "企业培训"
+  },
+  "requirements": [
+    {
+      "id": "R1",
+      "category": "培训对象与人数",
+      "statement": "面向新员工培训；客户最初提出30名，后续表示可能改为50人，具体等待名单，最终人数尚未确定。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        },
+        {
+          "segment_id": "S001:0003",
+          "quote": "客户补充：人数可能改为50人，具体还要等名单。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [
+        "最终名单尚待确定；提供方及提供时间待确认。"
+      ],
+      "acceptance": [
+        {
+          "text": "建议：客户确认最终名单与人数后，以实际服务范围核对。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "Q1：最终人数、名单提供时间及人数变化对费用和组织的影响如何确定？"
+      ]
+    },
+    {
+      "id": "R2",
+      "category": "培训时长",
+      "statement": "培训时长为半天，具体起止时间与休息安排未说明。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [
+        {
+          "text": "建议：按双方确认的日程核对授课时长与课程完成情况。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "Q2：培训的年份、最终日期和半天的具体起止时间是什么？"
+      ]
+    },
+    {
+      "id": "R3",
+      "category": "预算线索",
+      "statement": "客户提出预算8000元；费用包含项目、税费及人数变化后的费用处理未说明，预算不等于报价或成交金额。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [
+        {
+          "text": "建议：先确认预算覆盖项及费用清单，再核对交付范围；验收不预设预算已获审批或合同已签订。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "Q3：预算覆盖哪些费用，是否含讲义及税费；人数变化和可选服务如何处理？"
+      ]
+    },
+    {
+      "id": "R4",
+      "category": "培训日期",
+      "statement": "客户提出11月20日；内部记录另有11月21日的安排意见，未见客户确认改期，最终日期待确认。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        },
+        {
+          "segment_id": "S001:0004",
+          "quote": "内部项目经理：为了赶进度，先把50人和录播写成已确认，日期写11月21日。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [
+        {
+          "text": "建议：以客户明确确认的日程作为日期核对依据。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "Q2：培训的年份、最终日期和半天的具体起止时间是什么？"
+      ]
+    },
+    {
+      "id": "R5",
+      "category": "交付物",
+      "statement": "提供培训讲义；内容、形式、份数、交付时间及使用权限未说明。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [
+        "课程主题与大纲待确认；纸质讲义数量是否随名单调整待确认。"
+      ],
+      "acceptance": [
+        {
+          "text": "建议：根据双方确认的课程大纲检查讲义内容完整性，并按约定形式与时间交付。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "Q5：讲义的内容、形式、份数、交付时间和使用权限如何约定？"
+      ]
+    },
+    {
+      "id": "R6",
+      "category": "可选服务",
+      "statement": "录播目前为建议项，客户尚未确认；暂列可选服务，是否纳入交付及对应费用待客户确认。",
+      "evidence_type": "suggestion",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0002",
+          "quote": "销售内部建议：加录播和课后答疑，客户尚未确认。"
+        },
+        {
+          "segment_id": "S001:0004",
+          "quote": "内部项目经理：为了赶进度，先把50人和录播写成已确认，日期写11月21日。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [
+        "录播服务是否纳入范围待确认。"
+      ],
+      "acceptance": [
+        {
+          "text": "建议：仅在客户同意纳入范围后，确认录制授权、内容、交付方式、使用权限与验收要求。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "Q3：是否选用录播，费用与录制授权如何约定？"
+      ]
+    },
+    {
+      "id": "R7",
+      "category": "可选服务",
+      "statement": "课后答疑目前为建议项，客户尚未确认；暂列可选服务。",
+      "evidence_type": "suggestion",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0002",
+          "quote": "销售内部建议：加录播和课后答疑，客户尚未确认。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [
+        "课后答疑是否纳入范围待确认。"
+      ],
+      "acceptance": [
+        {
+          "text": "建议：如纳入范围，先约定答疑渠道、服务期限、响应方式和问题边界，再核对服务记录。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "Q3：是否选用课后答疑，其服务范围、期限和费用如何约定？"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "最终培训人数是多少？请明确名单提供方与时间，以及人数变化对组织和费用的影响。",
+      "impact": "影响讲义数量、场地、授课组织及费用范围。",
+      "owner": "待确认（建议客户协调名单，培训服务方评估影响）",
+      "requirement_ids": [
+        "R1",
+        "R3",
+        "R5"
+      ]
+    },
+    {
+      "id": "Q2",
+      "text": "请确认培训年份、最终日期及半天的具体起止时间；客户提出的11月20日与内部安排意见11月21日尚未统一。",
+      "impact": "影响讲师档期与参训通知；确认前不能承诺改期。",
+      "owner": "待确认（建议客户与培训服务方共同确认）",
+      "requirement_ids": [
+        "R2",
+        "R4"
+      ]
+    },
+    {
+      "id": "Q3",
+      "text": "8000元预算覆盖哪些费用、是否含税？录播和课后答疑是否选用，增加人数或服务后的费用、授权和服务边界如何约定？",
+      "impact": "影响交付范围与预算可行性；目前没有正式报价或可选服务确认。",
+      "owner": "待确认（建议客户明确选择，培训服务方提供范围及费用方案）",
+      "requirement_ids": [
+        "R1",
+        "R3",
+        "R6",
+        "R7"
+      ]
+    },
+    {
+      "id": "Q4",
+      "text": "培训主题、学习目标与新员工基础是什么？采用线上还是线下，地点或平台、讲师安排、设备和现场配合分别由谁负责？",
+      "impact": "影响大纲设计、课程实施条件及双方责任划分。",
+      "owner": "待确认（建议客户提供学习目标，双方明确执行分工）",
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R5"
+      ]
+    },
+    {
+      "id": "Q5",
+      "text": "讲义采用何种形式、内容、份数，何时交付、如何使用？由谁确认大纲和最终交付，采用什么验收方式？",
+      "impact": "影响讲义制作工作量、交付时间和验收依据；当前验收方式均为建议。",
+      "owner": "待确认（建议双方指定确认人与交付负责人）",
+      "requirement_ids": [
+        "R5",
+        "R2",
+        "R6",
+        "R7"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "C1",
+      "text": "人数尚未确定：初始为30名，后续可能调整为50人且须等待名单；现有记录中的人数状态尚未统一，最终人数待客户确认。",
+      "requirement_ids": [
+        "R1"
+      ],
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        },
+        {
+          "segment_id": "S001:0003",
+          "quote": "客户补充：人数可能改为50人，具体还要等名单。"
+        },
+        {
+          "segment_id": "S001:0004",
+          "quote": "内部项目经理：为了赶进度，先把50人和录播写成已确认，日期写11月21日。"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "客户提出11月20日，另有11月21日的内部排期意见；尚无客户同意改期的依据，最终日期待确认。",
+      "requirement_ids": [
+        "R4"
+      ],
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：给30名新员工做半天培训，预算8000元，11月20日，提供讲义。"
+        },
+        {
+          "segment_id": "S001:0004",
+          "quote": "内部项目经理：为了赶进度，先把50人和录播写成已确认，日期写11月21日。"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "text": "录播范围的记录状态不一致：存在未确认建议和按纳入范围处理的意见；尚无客户确认依据，是否纳入交付仍待确认。",
+      "requirement_ids": [
+        "R6"
+      ],
+      "source_refs": [
+        {
+          "segment_id": "S001:0002",
+          "quote": "销售内部建议：加录播和课后答疑，客户尚未确认。"
+        },
+        {
+          "segment_id": "S001:0004",
+          "quote": "内部项目经理：为了赶进度，先把50人和录播写成已确认，日期写11月21日。"
+        }
+      ]
+    }
+  ],
+  "change_notes": [
+    "根据同一份沟通原文，改用中性措辞概括可选服务与待解决差异；保留全部原文引用、需求ID和未解决冲突，未新增客户确认。"
+  ],
+  "removed_requirement_ids": []
+}
