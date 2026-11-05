@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/customer-requirements-banner.png" alt="客户需求整理助手：把零散沟通，整理成清晰的交付依据。支持需求确认草稿、待确认问题和需求追溯。" width="100%">
+</p>
+
 <h1 align="center">客户需求整理助手</h1>
 <p align="center"><strong>让每一项客户需求，都有依据、有边界、有明确的下一步。</strong></p>
 <p align="center">Customer Requirements Assistant<br>面向 WorkBuddy 的跨行业需求整理 Skill</p>
