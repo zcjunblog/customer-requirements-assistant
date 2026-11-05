@@ -11,8 +11,23 @@ import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
 NAME='customer-requirements-assistant'
+sys.path.insert(0,str(ROOT/'tools'))
+from distribution import skill_info, workbuddy_entry
 
 class DistributionTests(unittest.TestCase):
+    def test_workbuddy_examples_have_matching_translations(self):
+        profile=json.loads((ROOT/'distribution/workbuddy.json').read_text())
+        self.assertEqual(len(profile['examples_zh']),len(profile['examples_en']))
+
+    def test_workbuddy_build_rejects_invalid_examples(self):
+        from unittest.mock import patch
+        fields,body,version=skill_info()
+        profile=json.loads((ROOT/'distribution/workbuddy.json').read_text())
+        for invalid in (['one'], 'not-a-list', [None]*3):
+            with self.subTest(invalid=invalid):
+                with patch('distribution.json.loads',return_value={**profile,'examples_en':invalid}):
+                    with self.assertRaises(ValueError): workbuddy_entry(fields,body,version)
+
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory(prefix='agent distribution ')
         self.root=Path(self.tmp.name).resolve()

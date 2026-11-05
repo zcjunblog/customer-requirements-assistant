@@ -10,7 +10,7 @@ SCRIPTS = Path(__file__).resolve().parents[1] / 'skills/customer-requirements-as
 sys.path.insert(0, str(SCRIPTS))
 from intake import ingest
 from validate import validate
-from render import render
+from render import render, blocks_for, document_title, to_markdown
 
 
 def model_for(bundle):
@@ -166,6 +166,22 @@ class PipelineTests(unittest.TestCase):
         a=render(self.model,self.bundle,self.root/'out','off')
         self.assertEqual((Path(a['directory'])/'需求确认书.md').read_text().splitlines()[0],'# 培训需求确认书')
 
+    def test_title_draft_suffix_variants(self):
+        for suffix in ('需求确认（草稿）', '需求确认书（待确认稿）', '需求确认书 (草稿)', '需求确认草稿', '需求确认书'):
+            with self.subTest(suffix=suffix):
+                self.assertEqual(document_title('培训'+suffix), '培训需求确认书')
+        self.assertEqual(document_title('需求确认流程培训'), '需求确认流程培训需求确认书')
+
+    def test_document_summary_and_narrative_preserve_records(self):
+        blocks=blocks_for(self.model,self.bundle,validate(self.model,self.bundle))
+        summary=next(value for kind,value in blocks if kind=='summary')
+        self.assertEqual(summary[1], ['1','1','0','1'])
+        text=to_markdown(blocks)
+        self.assertIn('| 需求记录 | 待客户确认 | 冲突事项 | 集中问题 |',text)
+        self.assertIn(self.model['requirements'][0]['statement'],text)
+        self.assertIn(('p',self.model['questions'][0]['text']),blocks)
+        self.assertNotIn(('h2','Q1 '+self.model['questions'][0]['text']),blocks)
+
     @unittest.skipUnless(importlib.util.find_spec('pypdf'),'optional pypdf unavailable')
     def test_scanned_pdf_reported(self):
         from pypdf import PdfWriter
@@ -201,6 +217,9 @@ class PipelineTests(unittest.TestCase):
         self.assertIn('8000', text); self.assertIn('需求确认草稿', text)
         self.assertNotIn('pBdr', Document(doc).styles['Title'].element.xml)
         self.assertNotIn('eastAsiaTheme', Document(doc).styles['Title'].element.xml)
+        table=Document(doc).tables[0]
+        self.assertEqual([c.text for c in table.rows[1].cells],['1','1','0','1'])
+        self.assertIn('tblHeader',table.rows[0]._tr.xml)
         b = ingest([doc])
         self.assertEqual(b['sources'][0]['status'], 'ok')
         self.assertTrue(any('8000' in s['text'] for s in b['sources'][0]['segments']))

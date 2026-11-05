@@ -1,0 +1,37 @@
+[
+  {
+    "case": "branding",
+    "docx_directory": "outputs/0.2.1/verified-examples/branding/需求整理-20261105-143926-fyvgpu3r",
+    "pages": 2,
+    "pdf_text_intake": "passed",
+    "visual_review": "passed: all pages inspected, no clipping/overlap/missing Chinese glyphs"
+  },
+  {
+    "case": "event",
+    "docx_directory": "outputs/0.2.1/verified-examples/event/需求整理-20261105-143929-jqr6qhqv",
+    "pages": 2,
+    "pdf_text_intake": "passed",
+    "visual_review": "passed: all pages inspected, no clipping/overlap/missing Chinese glyphs"
+  },
+  {
+    "case": "software",
+    "docx_directory": "outputs/0.2.1/verified-examples/software/需求整理-20261105-143931-y95cdz1h",
+    "pages": 2,
+    "pdf_text_intake": "passed",
+    "visual_review": "passed: all pages inspected, no clipping/overlap/missing Chinese glyphs"
+  },
+  {
+    "case": "training",
+    "docx_directory": "outputs/0.2.1/verified-examples/training/需求整理-20261105-143932-dwo5t_1u",
+    "pages": 2,
+    "pdf_text_intake": "passed",
+    "visual_review": "passed: all pages inspected, no clipping/overlap/missing Chinese glyphs"
+  },
+  {
+    "case": "workbuddy-original",
+    "docx_directory": "outputs/0.2.1/verified-examples/workbuddy-original/需求整理-20261105-143934-b_ju5gub",
+    "pages": 4,
+    "pdf_text_intake": "passed",
+    "visual_review": "passed: all pages inspected, no clipping/overlap/missing Chinese glyphs"
+  }
+]

@@ -59,5 +59,10 @@ def workbuddy_entry(fields, body, version):
     required = {'name', 'description', 'display_name', 'display_name_en', 'description_zh', 'description_en', 'version', 'author'}
     if not all(values.get(key) for key in required):
         raise ValueError('Missing WorkBuddy metadata')
+    examples=[values.get(key,[]) for key in ('examples_zh','examples_en')]
+    if any(not isinstance(items,list) or any(not isinstance(item,str) or not item.strip() for item in items) for items in examples):
+        raise ValueError('WorkBuddy examples must be lists of non-empty strings')
+    if len(examples[0])!=len(examples[1]):
+        raise ValueError('WorkBuddy examples_zh and examples_en must have matching counts')
     lines = [key + ': ' + json.dumps(value, ensure_ascii=False) for key, value in values.items()]
     return ('---\n' + '\n'.join(lines) + '\n---\n' + body).encode('utf-8')

@@ -1,6 +1,6 @@
 # 客户端兼容与安装
 
-版本：0.2.0；核对日期：2026-11-05。
+版本：0.2.1；核对日期：2026-11-05。
 
 本项目采用 [Agent Skills 标准](https://agentskills.io/specification)，维护一套宿主中立的技能入口、数据协议和脚本。支持该规范且提供所需能力的 Agent 可以使用；安装目录、技能发现方式、执行权限仍由各宿主决定。
 
@@ -27,7 +27,7 @@
 | [Gemini CLI](https://geminicli.com/docs/cli/skills/) | `gemini` | `.gemini/skills/` | `~/.gemini/skills/` | 官方规范核对、安装器与脚本通过；客户端未实测 |
 | [OpenCode](https://opencode.ai/docs/skills/) | `opencode` | `.opencode/skills/` | `~/.config/opencode/skills/` | 官方规范核对、安装器与脚本通过；客户端未实测 |
 | 采用共享目录的宿主 | `generic` | `.agents/skills/` | `~/.agents/skills/` | 目录安装与脚本通过；须确认具体宿主支持此目录 |
-| WorkBuddy | 使用专用ZIP | 客户端上传安装 | 客户端管理 | v0.1.0客户端导入/任务通过；v0.2.0专用包解压运行通过，未重测客户端导入 |
+| WorkBuddy | 使用专用ZIP | 客户端上传安装 | 客户端管理 | v0.2.1候选包客户端导入/任务通过；最终包仅补齐英文示例，正文及资源逐文件一致，平台解析通过 |
 | 其他Agent | `--dest` | 由宿主配置指定 | 由宿主配置指定 | 提供标准包和手动加载方法，不保证原生发现 |
 
 目录安装测试在隔离临时目录运行，不会安装或启动所有客户端。不要将本表理解为所有版本、操作系统或云端产品已实测。OpenCode如使用自定义配置根目录，应通过`--dest`传入实际技能根目录。
@@ -71,8 +71,8 @@ Windows可将`python3`替换为已安装的`py -3`或`python`，路径按本机�
 
 ## 从安装包手动安装
 
-- **标准包**：[customer-requirements-assistant-0.2.0.zip](../releases/0.2.0/customer-requirements-assistant-0.2.0.zip)。解压后，将完整同名目录放到上表的技能根目录中，避免多嵌套一层文件夹。
-- **WorkBuddy包**：[customer-requirements-assistant-workbuddy-0.2.0.zip](../releases/0.2.0/customer-requirements-assistant-workbuddy-0.2.0.zip)。在WorkBuddy的技能页面选择添加/上传技能，按客户端提示导入。
+- **标准包**：[customer-requirements-assistant-0.2.1.zip](../releases/0.2.1/customer-requirements-assistant-0.2.1.zip)。解压后，将完整同名目录放到上表的技能根目录中，避免多嵌套一层文件夹。
+- **WorkBuddy包**：[customer-requirements-assistant-workbuddy-0.2.1.zip](../releases/0.2.1/customer-requirements-assistant-workbuddy-0.2.1.zip)。在WorkBuddy的技能页面选择添加/上传技能，按客户端提示导入。
 
 标准包的SKILL.md只有`name`和`description`两个通用字段。`agents/openai.yaml`用于Codex显示信息，其他宿主可以忽略。WorkBuddy包的展示字段由`distribution/workbuddy.json`在构建时注入；两个包共用同一正文、脚本和参考资料。
 

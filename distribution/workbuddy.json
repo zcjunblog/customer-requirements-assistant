@@ -10,6 +10,8 @@
     "整理这次培训的客户要求，生成交付清单和建议验收方式。"
   ],
   "examples_en": [
-    "Turn these client notes into a requirements draft with unresolved questions."
+    "Turn these client notes into a requirements draft with unresolved questions.",
+    "Compare the meeting notes and proposal to identify delivery scope and scheduling conflicts.",
+    "Organize the client requirements for this training into a delivery checklist and suggested acceptance criteria."
   ]
 }

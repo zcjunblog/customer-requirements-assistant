@@ -1,0 +1,30 @@
+{
+  "version": "0.2.1",
+  "client": "WorkBuddy V5.9.3",
+  "model": "DeepSeek-V4.1-Flash",
+  "requirements": 8,
+  "pending": 8,
+  "conflicts": 2,
+  "questions": 6,
+  "docx_pages": 4,
+  "visual_review": "passed: all4pages",
+  "installed_candidate_sha256": "6ed6ea466173e94c46734843c2d67c4659e9f2b55b010c866a497d508587fa17",
+  "final_workbuddy_package_sha256": "3511c468afde5d12ed915a11a2a82647bc591657f60068902d608a681a4a46a5",
+  "difference": "Final package adds2English examples to match3Chinese examples; Skill body and all resources identical to client-tested candidate. Final package re-extracted and4fixtures passed; final metadata accepted by marketplace parser.",
+  "identical_resources": [
+    "requirements-optional.txt",
+    "VERSION",
+    "references/industries.md",
+    "references/schema.md",
+    "references/runtime.md",
+    "agents/openai.yaml",
+    "scripts/intake.py",
+    "scripts/requirements_tool.py",
+    "scripts/render.py",
+    "scripts/validate.py",
+    "scripts/common.py",
+    "templates/requirements.json",
+    "templates/training-input.txt",
+    "templates/training-example.json"
+  ]
+}

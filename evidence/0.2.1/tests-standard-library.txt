@@ -1,0 +1,43 @@
+test_client_installs_and_dry_run (test_distribution.DistributionTests) ... ok
+test_custom_destination_and_symlink_protection (test_distribution.DistributionTests) ... ok
+test_custom_root_with_explicit_writable_work_directory (test_distribution.DistributionTests) ... ok
+test_dotdot_cannot_target_repository_source (test_distribution.DistributionTests) ... ok
+test_reinstall_refuses_and_replace_preserves_backup (test_distribution.DistributionTests) ... ok
+test_replacement_rejects_symlinked_backup_root (test_distribution.DistributionTests) ... ok
+test_standard_entrypoint_and_resources (test_distribution.DistributionTests) ... ok
+test_two_standalone_reproducible_packages (test_distribution.DistributionTests) ... ok
+test_user_scope_and_invalid_arguments_do_not_target_project (test_distribution.DistributionTests) ... ok
+test_work_directory_cannot_be_scanned_skill_root (test_distribution.DistributionTests) ... ok
+test_workbuddy_build_rejects_invalid_examples (test_distribution.DistributionTests) ... ok
+test_workbuddy_examples_have_matching_translations (test_distribution.DistributionTests) ... ok
+test_confirmation_can_reference_previous_message (test_pipeline.PipelineTests) ... ok
+test_confirmation_needs_evidence_and_suggestion_cannot_be_confirmed (test_pipeline.PipelineTests) ... ok
+test_customer_draft_omits_full_source_quotes (test_pipeline.PipelineTests) ... ok
+test_document_summary_and_narrative_preserve_records (test_pipeline.PipelineTests) ... ok
+test_docx_round_trip (test_pipeline.PipelineTests) ... skipped 'optional python-docx unavailable'
+test_duplicate_and_wrong_type (test_pipeline.PipelineTests) ... ok
+test_empty_and_oversize (test_pipeline.PipelineTests) ... ok
+test_explicit_source_acceptance_needs_quote (test_pipeline.PipelineTests) ... ok
+test_four_industry_fixtures (test_pipeline.PipelineTests) ... ok
+test_ingest_output_never_overwrites (test_pipeline.PipelineTests) ... ok
+test_malformed_conflict_refs (test_pipeline.PipelineTests) ... ok
+test_missing_optional_word_is_explicit (test_pipeline.PipelineTests) ... ok
+test_new_number_rejected (test_pipeline.PipelineTests) ... ok
+test_question_changes_need_revision_note (test_pipeline.PipelineTests) ... ok
+test_reingest_stable_ids (test_pipeline.PipelineTests) ... ok
+test_render_blocks_invalid (test_pipeline.PipelineTests) ... ok
+test_render_nonoverwriting_and_csv_safe (test_pipeline.PipelineTests) ... ok
+test_revision_keeps_old_refs (test_pipeline.PipelineTests) ... ok
+test_revision_removal_and_source_retention (test_pipeline.PipelineTests) ... ok
+test_scanned_pdf_reported (test_pipeline.PipelineTests) ... skipped 'optional pypdf unavailable'
+test_source_required_fields (test_pipeline.PipelineTests) ... ok
+test_sources_and_partial_failure (test_pipeline.PipelineTests) ... ok
+test_title_draft_suffix_variants (test_pipeline.PipelineTests) ... ok
+test_title_not_duplicated (test_pipeline.PipelineTests) ... ok
+test_unresolved_conflict_blocks_confirmation (test_pipeline.PipelineTests) ... ok
+test_valid_and_false_quote (test_pipeline.PipelineTests) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 1.257s
+
+OK (skipped=2)

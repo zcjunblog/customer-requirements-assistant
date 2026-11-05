@@ -7,7 +7,7 @@
 <p align="center">Customer Requirements Assistant<br>面向多种 Agent 客户端的跨行业需求整理 Skill</p>
 <p align="center">
   <img alt="Agent Skills" src="https://img.shields.io/badge/Agent_Skills-Portable-1f3555?style=flat-square">
-  <a href="releases/0.2.0/customer-requirements-assistant-0.2.0.zip"><img alt="Version 0.2.0" src="https://img.shields.io/badge/version-0.2.0-3668a0?style=flat-square"></a>
+  <a href="releases/0.2.1/customer-requirements-assistant-0.2.1.zip"><img alt="Version 0.2.1" src="https://img.shields.io/badge/version-0.2.1-3668a0?style=flat-square"></a>
   <img alt="Python 3.9 or newer" src="https://img.shields.io/badge/Python-3.9%2B-1f3555?style=flat-square">
 </p>
 <p align="center">
@@ -108,8 +108,8 @@ flowchart TD
 
 技能主体遵循 [Agent Skills 标准](https://agentskills.io/specification)，业务流程与脚本不依赖特定模型或客户端。提供两种安装包：
 
-- [**通用 Skill 包 · v0.2.0**](releases/0.2.0/customer-requirements-assistant-0.2.0.zip)：用于支持标准技能目录的客户端，或由其他Agent显式读取执行。
-- [**WorkBuddy 导入包 · v0.2.0**](releases/0.2.0/customer-requirements-assistant-workbuddy-0.2.0.zip)：包含WorkBuddy展示元数据，在客户端技能页面上传。
+- [**通用 Skill 包 · v0.2.1**](releases/0.2.1/customer-requirements-assistant-0.2.1.zip)：用于支持标准技能目录的客户端，或由其他Agent显式读取执行。
+- [**WorkBuddy 导入包 · v0.2.1**](releases/0.2.1/customer-requirements-assistant-workbuddy-0.2.1.zip)：包含WorkBuddy展示元数据，在客户端技能页面上传。
 
 取得仓库后，可使用安装器选择目标客户端：
 
@@ -215,6 +215,8 @@ python3 tools/build_release.py
 python3 tools/smoke_archive.py
 ```
 
+v0.2.1完成Word与Markdown版式优化，修复标题重复，增加首页状态概览，调整正文层级与分页。六份文档共16页已逐页检查，38项自动测试与双包解压运行通过。[查看本版验证](evidence/0.2.1/verification.md)。
+
 v0.2.0已通过34项自动测试、双包各4组解压运行，并完成Codex CLI显式发现与实际任务验证。详见[本版验证报告](evidence/0.2.0/verification.md)。各客户端的规范适配、目录安装与实际运行分别记录，不将标准兼容写成所有客户端均已实测。
 
 v0.1.0 已完成 24 项自动测试、四行业固定模型的解压运行验证，以及 macOS WorkBuddy V5.9.3 的导入和实际任务测试。完整依赖环境 24 项通过；标准库环境 22 项通过、2 项可选依赖测试跳过。四份样例 Word 与一份客户端实际 Word，共 12 页完成视觉检查。
@@ -230,8 +232,8 @@ v0.1.0 已完成 24 项自动测试、四行业固定模型的解压运行验证
 - 图片聊天记录与扫描件支持。
 - 更多行业案例、复杂文档及跨平台验证。
 
-**项目计划在发布后开源。** 开源前将补齐许可证、贡献说明与发布资料，具体许可条款以届时仓库中的 `LICENSE` 为准。目前安装包可用于导入验证，技能市场发布仍在准备中。
+**项目计划在发布后开源。** 开源前将补齐许可证、贡献说明与发布资料，具体许可条款以届时仓库中的 `LICENSE` 为准。v0.2.1已提交WorkBuddy技能市场审核，当前尚未上线。[查看提审记录](docs/marketplace/submission.md)。
 
-[版本记录](CHANGELOG.md) · [产品设计](memory-bank/design.md) · [开发待办](memory-bank/todo.md) · [安装包校验摘要](releases/0.2.0/SHA256SUMS)
+[版本记录](CHANGELOG.md) · [产品设计](memory-bank/design.md) · [开发待办](memory-bank/todo.md) · [安装包校验摘要](releases/0.2.1/SHA256SUMS)
 
 <p align="center">Created by <a href="https://github.com/zcjunblog">zcjunblog</a> · <a href="https://github.com/zcjunblog/sitecraft">Sitecraft 官网设计 Skill</a></p>
