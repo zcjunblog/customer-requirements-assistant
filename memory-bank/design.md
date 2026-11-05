@@ -1,7 +1,7 @@
 # 客户需求整理助手：产品设计
 
 更新日期：2026-11-05（Asia/Shanghai）
-状态：v0.1.0 已实现并打包；本地验证和 WorkBuddy 导入通过，客户端完整运行记录见 evidence/verification.md。
+状态：v0.1.0 已实现并打包；本地验证和 WorkBuddy 导入/端到端运行通过，客户端完整运行记录见 evidence/verification.md。
 
 ## 1. 已确认决策与当前范围
 
