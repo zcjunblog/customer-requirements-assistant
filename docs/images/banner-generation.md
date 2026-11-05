@@ -2,12 +2,31 @@
 
 - 日期：2026-11-05。
 - 资源：`customer-requirements-banner.png`。
-- 工具：内置 imagegen，生成新图；未使用 CLI/API 回退。
-- 参考：用户提供的 Media Resolver README 截图，仅参考横幅构图、深色背景与暖色点缀；未将原截图加入仓库。
+- 工具：内置 imagegen；初版生成后根据用户要求编辑为白蓝办公风格，未使用 CLI/API 回退。
+- 参考：用户提供的 Media Resolver README 截图，仅保留横幅构图；最终按用户要求采用白底、浅蓝背景、深蓝文字与蓝色强调。未将原截图加入仓库。
 - 用途：README 产品宣传头图；右侧文档卡片为概念示意，不是产品界面截图。
 - 检查：标题、说明和卡片中文可读；无裁切、无许可证或已开源声明。图片按原始生成结果保存。
 
-## 最终生成提示词
+## 最终编辑提示词（白蓝办公风格）
+
+```text
+Edit the supplied README banner for 客户需求整理助手. Change its color scheme to a bright professional WHITE AND BLUE office productivity aesthetic. Preserve the exact 3:1 aspect ratio, all wording, Chinese characters, layout, hierarchy, margins, large one-line title, right-hand document card and rounded corners.
+Replace dark charcoal/brown background with clean near-white #f8fbff, subtle pale blue wash toward the right. Keep only a barely visible pale blue grid. Main title deep navy #15345b. Subtitle and body slate blue-gray, high contrast. Replace ALL peach/orange accents with clear professional blue #2875df. Right-hand document card white with thin pale blue border and restrained soft blue shadow; heading navy; row numbers blue; separators pale blue. Footer blue-gray. Use a clean, airy, calm business-document look; no dark background, no orange, no busy decorative additions.
+Keep text EXACTLY:
+WORKBUDDY SKILL
+客户需求整理助手
+把零散沟通，整理成清晰的交付依据。
+从沟通记录到需求确认草稿
+WORD  /  MARKDOWN  /  CSV
+需求确认草稿
+01  交付范围
+02  待确认问题
+03  需求追溯
+有来源 · 可核对 · 可修订
+No new text, no watermark, no browser frame. Render crisp legible typography.
+```
+
+## 初版生成提示词（深色方案，已替换）
 
 ```text
 Use case: ads-marketing.

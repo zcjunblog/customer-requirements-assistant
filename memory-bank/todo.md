@@ -46,7 +46,7 @@
 - [x] 更新design.md、Agent.md、实施计划及验证报告。
 - [x] 同步GitHub并核对远程提交、工作树和包摘要。功能提交c823843已推送main；git ls-remote与本地一致，gh确认仓库仍私有。
 - [x] 参考Sitecraft重写正式README，补充七阶段流程、Mermaid图、实际案例与开源计划。
-- [x] 按用户提供的Media Resolver宣传横幅风格制作README头图，检查中文文案并接入仓库；生成记录见docs/images/banner-generation.md。
+- [x] 按用户提供的Media Resolver宣传横幅布局制作README头图，并依据办公Skill定位改为白蓝色调，检查中文文案并接入仓库；生成记录见docs/images/banner-generation.md。
 - [x] 记录用户意向：发布后准备开源，当前保持私有。
 - [ ] 发布阶段落实开源许可证、贡献说明、公开范围、市场预览图及收费方式。
 - [ ] 用户授权后提交技能市场审核；导入检测不等于市场审核。
