@@ -4,16 +4,16 @@
 
 - 中文名称：客户需求整理助手。
 - 稳定标识与仓库名：`customer-requirements-assistant`。
-- 目标平台：WorkBuddy；目标用户覆盖各行业，不限于软件开发或自由职业接单。
+- 目标平台：支持Agent Skills规范或可显式读取技能的Agent客户端；保留WorkBuddy专用发布包。目标用户覆盖各行业，不限于软件开发或自由职业接单。
 - 已授权范围：按设计开发完整 Skill、打包、测试，以及同步项目 memory-bank 和 GitHub。
-- 当前交付版本为 v0.1.0；功能和验证状态以 README、memory-bank/todo.md、evidence 为准。
+- 当前交付版本为 v0.2.0；功能和验证状态以 README、memory-bank/todo.md、evidence 为准。
 
 ## 开始工作前
 
 1. 阅读 `memory-bank/design.md` 和 `memory-bank/todo.md`。
 2. 查看当前 Git 状态，保留用户已有改动。
 3. 以最新用户指令为准；发现设计冲突时记录差异，不默默扩大范围。
-4. 若存在 `.codegraph/` 且相关 MCP 可用，代码定义、依赖和影响分析优先使用 CodeGraph；当前代码位于 skill/customer-requirements-assistant/scripts。
+4. 若存在 `.codegraph/` 且相关 MCP 可用，代码定义、依赖和影响分析优先使用 CodeGraph；当前代码位于 skills/customer-requirements-assistant/scripts。
 
 ## 产品规则
 
@@ -27,7 +27,7 @@
 
 ## 工程与交付规则
 
-- 优先使用 WorkBuddy 已有能力，新增依赖必须有实际必要性与失败处理。
+- 优先使用当前Agent宿主已有能力，新增依赖必须有实际必要性与失败处理。
 - 不预设开发机特有的绝对路径、字体或工具为用户环境必备条件。
 - 不覆盖源文件；产物独立保存，重复执行避免冲掉旧版本。
 - 使用虚构或脱敏测试材料；密钥、真实客户资料和普通运行产物不得进入仓库；evidence可保存明确标记的虚构验证材料，outputs保持忽略。

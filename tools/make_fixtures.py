@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 import sys
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'skill/customer-requirements-assistant/scripts'))
+sys.path.insert(0,str(ROOT/'skills/customer-requirements-assistant/scripts'))
 from intake import ingest
 CASES={
  'training': ('新员工培训','企业培训',[
@@ -55,6 +55,6 @@ def main():
    (folder/file).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
   (folder/'expectations.md').write_text('# 人工标注预期\n\n虚构案例；expected.json是人工整理的测试模型，不是自动提取结果。\n\n- 明确要求保留原文来源，所有需求待确认。\n- R3/C1保留双方冲突依据。\n- R4不进入已确认承诺。\n- 验收方式为建议。\n- 待确认问题覆盖关键范围缺口。\n',encoding='utf-8')
   if key=='training':
-   (ROOT/'skill/customer-requirements-assistant/templates/training-input.txt').write_text(raw.read_text(),encoding='utf-8')
-   (ROOT/'skill/customer-requirements-assistant/templates/training-example.json').write_text(json.dumps(model,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+   (ROOT/'skills/customer-requirements-assistant/templates/training-input.txt').write_text(raw.read_text(),encoding='utf-8')
+   (ROOT/'skills/customer-requirements-assistant/templates/training-example.json').write_text(json.dumps(model,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 if __name__=='__main__': main()

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Portable CLI entrypoint; model extraction is performed by WorkBuddy, not here."""
+"""Portable CLI entrypoint; model extraction is performed by the host agent, not here."""
 import argparse
 import importlib.util
 import json

@@ -28,3 +28,7 @@ def safe_text(value):
     return ''.join(c for c in str(value) if c in '\t\n\r' or
                    (0x20 <= ord(c) <= 0xD7FF) or (0xE000 <= ord(c) <= 0xFFFD) or
                    (0x10000 <= ord(c) <= 0x10FFFF))
+
+
+def skill_version():
+    return (Path(__file__).resolve().parents[1] / "VERSION").read_text(encoding="utf-8").strip()

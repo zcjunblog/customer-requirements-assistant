@@ -7,7 +7,7 @@
 - 用途：README 产品宣传头图；右侧文档卡片为概念示意，不是产品界面截图。
 - 检查：标题、说明和卡片中文可读；无裁切、无许可证或已开源声明。图片按原始生成结果保存。
 
-## 最终编辑提示词（白蓝办公风格）
+## 白蓝办公风格编辑提示词
 
 ```text
 Edit the supplied README banner for 客户需求整理助手. Change its color scheme to a bright professional WHITE AND BLUE office productivity aesthetic. Preserve the exact 3:1 aspect ratio, all wording, Chinese characters, layout, hierarchy, margins, large one-line title, right-hand document card and rounded corners.
@@ -43,4 +43,12 @@ Right panel heading: "需求确认草稿"
 Right panel rows with subtle separators: "01  交付范围", "02  待确认问题", "03  需求追溯"
 Panel footer small: "有来源 · 可核对 · 可修订"
 The entire layout must stay inside generous safe margins, title must be dominant, right panel narrower and secondary, no brand logos, no license badge, no OPEN SOURCE claim, no watermark, no invented interface buttons. Professional, restrained, confident.
+```
+
+## v0.2.0 通用定位编辑
+
+使用内置imagegen保留白蓝布局与全部业务文案，仅将WORKBUDDY SKILL改为AGENT SKILL。成图已查看，文字可读、比例3:1。
+
+```text
+Edit this existing white-and-blue office productivity README banner. Change ONLY the top-left English eyebrow text from "WORKBUDDY SKILL" to "AGENT SKILL". Preserve all other Chinese and English wording exactly, preserve the large Chinese title 客户需求整理助手, the blue-white palette, layout, 3:1 aspect ratio, right document card, margins, typography and all other visual content. No additions. Clean legible text.
 ```

@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "title": "新品牌海报制作",
+    "industry": "品牌与平面设计（虚构客户资料）"
+  },
+  "requirements": [
+    {
+      "id": "R1",
+      "category": "目标、数量与尺寸",
+      "statement": "为新品牌制作3张海报，尺寸标注为1080×1440；尺寸单位、画面内容和使用渠道待确认。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：为新品牌制作3张1080×1440海报，交付PNG，11月18日交付。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [
+        "待确认：品牌名称、标识、文案、图片、参考风格及素材使用授权的提供方和提供时间。"
+      ],
+      "acceptance": [
+        {
+          "text": "逐张核对海报数量、确认后的尺寸及内容。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "Q2：请确认各张海报的内容、渠道、尺寸单位、设计方向及品牌素材提供安排。"
+      ]
+    },
+    {
+      "id": "R2",
+      "category": "交付格式",
+      "statement": "海报交付格式为PNG。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：为新品牌制作3张1080×1440海报，交付PNG，11月18日交付。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [],
+      "acceptance": [
+        {
+          "text": "检查PNG文件可正常打开，画面和文字完整，并按确认后的规格核对。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "Q4：请确认验收对象、审核流程与修改轮次。"
+      ]
+    },
+    {
+      "id": "R3",
+      "category": "交付时间",
+      "statement": "原始要求为11月18日交付；尚无资料明确确认调整后的交付日期。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：为新品牌制作3张1080×1440海报，交付PNG，11月18日交付。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [
+        "待确认：最终活动时间与海报使用时间，以核对交付排期。"
+      ],
+      "acceptance": [],
+      "open_questions": [
+        "Q1：请确认最终活动日期及海报交付日期，并明确年份、具体时点和二者的先后安排。"
+      ]
+    },
+    {
+      "id": "R4",
+      "category": "活动日期与排期依赖",
+      "statement": "活动可能改到11月16日，最终日期需等原消息所说的“明天”才能确定；该消息未明确变更海报交付日期。",
+      "evidence_type": "explicit",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0003",
+          "quote": "客户补充：活动可能改到11月16日，最终日期明天才能确定。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [
+        "待确认：活动是否需要提前收到本次海报，以及是否需要调整交付时间。"
+      ],
+      "acceptance": [],
+      "open_questions": [
+        "Q1：请确认最终活动日期及海报交付日期；原消息发送日期及“明天”对应的具体日期也待确认。"
+      ]
+    },
+    {
+      "id": "R5",
+      "category": "可选交付物",
+      "statement": "建议额外提供PSD源文件，是否纳入交付范围待客户确认；当前不构成交付承诺。",
+      "evidence_type": "suggestion",
+      "confirmation_status": "pending",
+      "source_refs": [
+        {
+          "segment_id": "S001:0002",
+          "quote": "设计师内部建议：额外提供PSD源文件，客户尚未确认。"
+        }
+      ],
+      "confirmation_refs": [],
+      "priority": "未说明",
+      "dependencies": [
+        "待确认：客户是否选择该建议项及其具体交付边界。"
+      ],
+      "acceptance": [
+        {
+          "text": "若另行确认提供源文件，建议检查文件可打开、约定图层可编辑及依赖素材交接情况。",
+          "kind": "suggestion",
+          "source_refs": []
+        }
+      ],
+      "open_questions": [
+        "Q3：是否需要PSD源文件；如需要，请确认可编辑范围、素材与字体交接方式及对费用和排期的影响。"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "最终活动日期和海报交付日期分别是什么？请确认年份、具体时点及海报是否须在活动前交付，并补充原消息发送日期，以明确“明天”的含义。",
+      "impact": "原定11月18日交付与活动可能提前至11月16日存在待协调的排期风险；不能将活动日期直接替换成交付日期。",
+      "owner": "客户（具体确认人待明确）",
+      "requirement_ids": [
+        "R3",
+        "R4"
+      ]
+    },
+    {
+      "id": "Q2",
+      "text": "3张海报各自的主题、文案、使用渠道和设计方向是什么？1080×1440的尺寸单位是什么？品牌及图片素材由谁在何时提供，使用授权如何落实？",
+      "impact": "影响设计启动、内容完整性、画面规格及素材使用范围。",
+      "owner": "客户及素材提供方（具体责任待确认）",
+      "requirement_ids": [
+        "R1"
+      ]
+    },
+    {
+      "id": "Q3",
+      "text": "是否将PSD源文件纳入交付？如需要，可编辑范围、素材与字体交接方式，以及对费用和排期的影响如何约定？",
+      "impact": "当前只有源文件建议，未获客户确认；关系交付范围与工作量。",
+      "owner": "客户与设计服务方（职责待确认）",
+      "requirement_ids": [
+        "R5"
+      ]
+    },
+    {
+      "id": "Q4",
+      "text": "谁负责审核和最终验收？验收标准、修改轮次、反馈期限及超出范围的变更流程如何约定？",
+      "impact": "现有资料未约定验收与修改机制，影响完成判定和排期。",
+      "owner": "客户与设计服务方（具体审核人待确认）",
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R5"
+      ]
+    },
+    {
+      "id": "Q5",
+      "text": "预算范围及费用约定是否已有依据？PNG交付与可选PSD交付分别如何界定费用范围？",
+      "impact": "资料没有预算或报价信息，无法据此形成价格承诺。",
+      "owner": "客户与设计服务方（费用确认人待明确）",
+      "requirement_ids": [
+        "R1",
+        "R2",
+        "R5"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "C1",
+      "text": "待协调的排期事项：海报原定11月18日交付，活动可能改到11月16日。如果海报须用于活动前宣传或活动现场，原交付安排可能不满足使用时间；最终活动日期及是否调整交付日期均待确认。两条消息描述的日期用途不同，不能认定后一条已覆盖前一条。",
+      "requirement_ids": [
+        "R3",
+        "R4"
+      ],
+      "source_refs": [
+        {
+          "segment_id": "S001:0001",
+          "quote": "客户：为新品牌制作3张1080×1440海报，交付PNG，11月18日交付。"
+        },
+        {
+          "segment_id": "S001:0003",
+          "quote": "客户补充：活动可能改到11月16日，最终日期明天才能确定。"
+        }
+      ]
+    }
+  ],
+  "change_notes": [],
+  "removed_requirement_ids": []
+}

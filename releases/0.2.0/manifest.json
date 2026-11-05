@@ -1,0 +1,141 @@
+{
+  "version": "0.2.0",
+  "packages": [
+    {
+      "profile": "standard",
+      "archive": "customer-requirements-assistant-0.2.0.zip",
+      "bytes": 24363,
+      "sha256": "e9ce3136ee03b708e918b1799796e14b9dcdb41c54df37e136ac1cd448790260",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "1e3634142eadcd3790ceac84ff216472d735a7524a6a4da4df2b6712d6cc561c"
+        },
+        {
+          "path": "VERSION",
+          "sha256": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "c7139b1cfa657d48d4f70f6fee1f323d8d060e9f35c2dce5363763e2792c23af"
+        },
+        {
+          "path": "references/industries.md",
+          "sha256": "3d4267f97afeeed6c1669548e007d4457a4d1ddac1d327c034ab42bd5567e71a"
+        },
+        {
+          "path": "references/runtime.md",
+          "sha256": "cb7e8f1a37bb8a2ba11d202775e9c94249de5978efbb25cad6a64cb712b557a3"
+        },
+        {
+          "path": "references/schema.md",
+          "sha256": "4412de5663d407d89dc28eee8275caf10520b9a3d6b93f8c4e9e6e2d5f5ebb7c"
+        },
+        {
+          "path": "requirements-optional.txt",
+          "sha256": "6d926dfacc2e73302213d8b9c738b1f8c9d5a94103e52eec3c57e690ac40d437"
+        },
+        {
+          "path": "scripts/common.py",
+          "sha256": "d1b08d5f2dba18706490c73c4d400e4a05a60bf6e65991903e09f97c4dc0f6e6"
+        },
+        {
+          "path": "scripts/intake.py",
+          "sha256": "4407f373469e01e128e06d6c8b8beba183f5aff387d1c65f86756286b269b7ef"
+        },
+        {
+          "path": "scripts/render.py",
+          "sha256": "5070153401e4834fc1922b9996ed63a2bb1293ced9e18d686c60430205238339"
+        },
+        {
+          "path": "scripts/requirements_tool.py",
+          "sha256": "c85aa9fe5a64515ee0d2637fc5fbe4838f4390cd12ff94ea9382d4db009343fc"
+        },
+        {
+          "path": "scripts/validate.py",
+          "sha256": "bfd66d7a32701a44b994c107ea34dd9b576b932757580f19045af9d29466c959"
+        },
+        {
+          "path": "templates/requirements.json",
+          "sha256": "4a881f08c8fe0a6a6ea56e7602a52ec38c95a5eb3c300885df8b83fb61f881cf"
+        },
+        {
+          "path": "templates/training-example.json",
+          "sha256": "79eff426c1518d86c98f0325ec6bb08c8d694830372959e5d30af3f00f6b5dc1"
+        },
+        {
+          "path": "templates/training-input.txt",
+          "sha256": "41a9325a1bd5c448bbe1066638caf2167b9504797a5103eebf7e223415029c30"
+        }
+      ]
+    },
+    {
+      "profile": "workbuddy",
+      "archive": "customer-requirements-assistant-workbuddy-0.2.0.zip",
+      "bytes": 24694,
+      "sha256": "933f015849b8f017b18c8fa116d5cb304a9f05f8978e000cb796e6160e810d87",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "1bf41f9567190f828efda07d4cafd908aff32eb0e46e37e5c0217c1f0b6e7134"
+        },
+        {
+          "path": "VERSION",
+          "sha256": "1f930dd1f133c1f97a94fe3acb8db34372cf4c01ffdb2b3ff4ca72f9494121e9"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "c7139b1cfa657d48d4f70f6fee1f323d8d060e9f35c2dce5363763e2792c23af"
+        },
+        {
+          "path": "references/industries.md",
+          "sha256": "3d4267f97afeeed6c1669548e007d4457a4d1ddac1d327c034ab42bd5567e71a"
+        },
+        {
+          "path": "references/runtime.md",
+          "sha256": "cb7e8f1a37bb8a2ba11d202775e9c94249de5978efbb25cad6a64cb712b557a3"
+        },
+        {
+          "path": "references/schema.md",
+          "sha256": "4412de5663d407d89dc28eee8275caf10520b9a3d6b93f8c4e9e6e2d5f5ebb7c"
+        },
+        {
+          "path": "requirements-optional.txt",
+          "sha256": "6d926dfacc2e73302213d8b9c738b1f8c9d5a94103e52eec3c57e690ac40d437"
+        },
+        {
+          "path": "scripts/common.py",
+          "sha256": "d1b08d5f2dba18706490c73c4d400e4a05a60bf6e65991903e09f97c4dc0f6e6"
+        },
+        {
+          "path": "scripts/intake.py",
+          "sha256": "4407f373469e01e128e06d6c8b8beba183f5aff387d1c65f86756286b269b7ef"
+        },
+        {
+          "path": "scripts/render.py",
+          "sha256": "5070153401e4834fc1922b9996ed63a2bb1293ced9e18d686c60430205238339"
+        },
+        {
+          "path": "scripts/requirements_tool.py",
+          "sha256": "c85aa9fe5a64515ee0d2637fc5fbe4838f4390cd12ff94ea9382d4db009343fc"
+        },
+        {
+          "path": "scripts/validate.py",
+          "sha256": "bfd66d7a32701a44b994c107ea34dd9b576b932757580f19045af9d29466c959"
+        },
+        {
+          "path": "templates/requirements.json",
+          "sha256": "4a881f08c8fe0a6a6ea56e7602a52ec38c95a5eb3c300885df8b83fb61f881cf"
+        },
+        {
+          "path": "templates/training-example.json",
+          "sha256": "79eff426c1518d86c98f0325ec6bb08c8d694830372959e5d30af3f00f6b5dc1"
+        },
+        {
+          "path": "templates/training-input.txt",
+          "sha256": "41a9325a1bd5c448bbe1066638caf2167b9504797a5103eebf7e223415029c30"
+        }
+      ]
+    }
+  ]
+}

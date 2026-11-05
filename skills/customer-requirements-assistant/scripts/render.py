@@ -10,7 +10,7 @@ from pathlib import Path
 import re
 import shutil
 import tempfile
-from common import safe_text
+from common import safe_text, skill_version
 from validate import validate
 
 EVIDENCE = {'explicit':'资料明确提出','inferred':'根据资料推断，待确认','suggestion':'建议项，未纳入承诺'}
@@ -174,7 +174,7 @@ def render(model,bundle,out,docx_mode='auto',previous=None):
                 word='missing_dependency'; result['warnings'].append('未生成 Word：缺少 python-docx；Markdown和CSV已生成。')
         for filename,data in [('需求数据.json',model),('来源数据.json',bundle),('校验报告.json',result)]:
             (work/filename).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-        manifest={'skill_version':'0.1.0','created_at':datetime.now(timezone.utc).isoformat(),'status':'draft','word':word,
+        manifest={'skill_version':skill_version(),'created_at':datetime.now(timezone.utc).isoformat(),'status':'draft','word':word,
                   'files':[{ 'name':p.name, 'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(work.iterdir())],
                   'notes':['需求追溯表CSV、来源数据、需求数据、来源索引和上一版数据是内部工作资料，含完整原文；对外文件也须人工复核。','结构校验不等于事实或客户确认核验。']}
         (work/'交付清单.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

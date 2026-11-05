@@ -1,0 +1,15 @@
+{
+  "display_name": "客户需求整理助手",
+  "display_name_en": "Customer Requirements Assistant",
+  "description_zh": "将客户聊天、会议记录和零散资料整理成需求确认书，明确交付范围、待确认问题与验收标准。",
+  "description_en": "Turn client notes into traceable requirement drafts, delivery scope and acceptance questions across industries.",
+  "author": "zcjunblog",
+  "examples_zh": [
+    "把客户聊天整理成需求确认书，标出还没说清楚的地方。",
+    "对照会议记录和方案，找出交付范围与时间上的冲突。",
+    "整理这次培训的客户要求，生成交付清单和建议验收方式。"
+  ],
+  "examples_en": [
+    "Turn these client notes into a requirements draft with unresolved questions."
+  ]
+}

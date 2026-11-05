@@ -1,0 +1,7 @@
+{
+  "errors": [],
+  "warnings": [
+    "校验只验证结构、引文和数字匹配；来源真伪、说话人、中文数词及语义蕴含需复核。",
+    "未生成 Word：缺少 python-docx；Markdown和CSV已生成。"
+  ]
+}

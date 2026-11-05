@@ -1,0 +1,16 @@
+{
+  "client": "codex-cli 0.166.0-alpha.6",
+  "date": "2026-11-05",
+  "skill_version": "0.2.0",
+  "discovery": "project .agents/skills; explicit $customer-requirements-assistant request",
+  "installed_source_matches": true,
+  "commands": "doctor/ingest/validate/render",
+  "requirements": 5,
+  "all_pending": true,
+  "questions": 5,
+  "conflicts": 1,
+  "validation_errors": 0,
+  "artifact_hashes": "all matched",
+  "word": "missing_dependency",
+  "limits": "Synthetic branding case; explicit invocation only. python-docx unavailable in selected client environments, no dependencies installed. Not a test of automatic routing or every Codex product."
+}

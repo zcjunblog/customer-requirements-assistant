@@ -6,7 +6,7 @@ from pathlib import Path
 import subprocess
 import sys
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'skill/customer-requirements-assistant/scripts'))
+sys.path.insert(0,str(ROOT/'skills/customer-requirements-assistant/scripts'))
 from intake import ingest
 from render import render
 p=argparse.ArgumentParser(); p.add_argument('--renderer',required=True); p.add_argument('--fontconfig')

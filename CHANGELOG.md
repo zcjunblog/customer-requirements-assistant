@@ -1,5 +1,13 @@
 # 版本记录
 
+## 0.2.0 — 2026-11-05
+
+- 技能主体升级为标准Agent Skills格式，移至`skills/customer-requirements-assistant`，保持宿主中立。
+- 提供通用ZIP与WorkBuddy专用ZIP，共用正文、脚本、模板与参考资料；保留0.1.0历史包。
+- 新增Codex、Claude Code、Cursor、Copilot、Gemini CLI、OpenCode和自定义路径安装器，支持项目/用户范围、预览、备份更新。
+- 加入Codex显示元数据及无脚本执行能力时的Markdown降级说明，版本由包内VERSION统一读取。
+- 更新跨客户端安装指南、兼容矩阵、README及宣传图。逐客户端实测状态见evidence/0.2.0/verification.md。
+
 ## 0.1.0 — 2026-11-05
 
 - 提供 WorkBuddy Skill 元数据、跨行业工作流、数据规范和培训示例。

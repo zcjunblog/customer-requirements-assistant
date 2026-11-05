@@ -6,7 +6,7 @@ import sys
 import tempfile
 import unittest
 
-SCRIPTS = Path(__file__).resolve().parents[1] / 'skill/customer-requirements-assistant/scripts'
+SCRIPTS = Path(__file__).resolve().parents[1] / 'skills/customer-requirements-assistant/scripts'
 sys.path.insert(0, str(SCRIPTS))
 from intake import ingest
 from validate import validate

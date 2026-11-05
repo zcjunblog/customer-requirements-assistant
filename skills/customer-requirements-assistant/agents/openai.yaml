@@ -1,0 +1,4 @@
+interface:
+  display_name: "客户需求整理助手"
+  short_description: "整理客户沟通与会议资料，生成有来源的需求确认草稿、问题清单和交付文件"
+  default_prompt: "使用 $customer-requirements-assistant 整理这些客户资料，生成需求确认草稿、待确认问题和需求追溯表。"

@@ -1,0 +1,26 @@
+[
+  {
+    "file": "customer-requirements-assistant-0.2.0.md",
+    "keys": [
+      "name",
+      "description"
+    ],
+    "parsed": true
+  },
+  {
+    "file": "customer-requirements-assistant-workbuddy-0.2.0.md",
+    "keys": [
+      "name",
+      "description",
+      "display_name",
+      "display_name_en",
+      "description_zh",
+      "description_en",
+      "author",
+      "examples_zh",
+      "examples_en",
+      "version"
+    ],
+    "parsed": true
+  }
+]

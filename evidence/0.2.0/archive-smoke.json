@@ -1,0 +1,57 @@
+{
+  "version": "0.2.0",
+  "packages": [
+    {
+      "profile": "standard",
+      "sha256": "e9ce3136ee03b708e918b1799796e14b9dcdb41c54df37e136ac1cd448790260",
+      "cases": [
+        {
+          "name": "branding",
+          "commands": "ingest/validate/render",
+          "word": "generated"
+        },
+        {
+          "name": "event",
+          "commands": "ingest/validate/render",
+          "word": "generated"
+        },
+        {
+          "name": "software",
+          "commands": "ingest/validate/render",
+          "word": "generated"
+        },
+        {
+          "name": "training",
+          "commands": "ingest/validate/render",
+          "word": "generated"
+        }
+      ]
+    },
+    {
+      "profile": "workbuddy",
+      "sha256": "933f015849b8f017b18c8fa116d5cb304a9f05f8978e000cb796e6160e810d87",
+      "cases": [
+        {
+          "name": "branding",
+          "commands": "ingest/validate/render",
+          "word": "generated"
+        },
+        {
+          "name": "event",
+          "commands": "ingest/validate/render",
+          "word": "generated"
+        },
+        {
+          "name": "software",
+          "commands": "ingest/validate/render",
+          "word": "generated"
+        },
+        {
+          "name": "training",
+          "commands": "ingest/validate/render",
+          "word": "generated"
+        }
+      ]
+    }
+  ]
+}

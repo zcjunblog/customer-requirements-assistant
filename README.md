@@ -4,10 +4,10 @@
 
 <h1 align="center">客户需求整理助手</h1>
 <p align="center"><strong>让每一项客户需求，都有依据、有边界、有明确的下一步。</strong></p>
-<p align="center">Customer Requirements Assistant<br>面向 WorkBuddy 的跨行业需求整理 Skill</p>
+<p align="center">Customer Requirements Assistant<br>面向多种 Agent 客户端的跨行业需求整理 Skill</p>
 <p align="center">
-  <img alt="WorkBuddy Skill" src="https://img.shields.io/badge/WorkBuddy-Skill-1f3555?style=flat-square">
-  <a href="releases/0.1.0/customer-requirements-assistant-0.1.0.zip"><img alt="Version 0.1.0" src="https://img.shields.io/badge/version-0.1.0-3668a0?style=flat-square"></a>
+  <img alt="Agent Skills" src="https://img.shields.io/badge/Agent_Skills-Portable-1f3555?style=flat-square">
+  <a href="releases/0.2.0/customer-requirements-assistant-0.2.0.zip"><img alt="Version 0.2.0" src="https://img.shields.io/badge/version-0.2.0-3668a0?style=flat-square"></a>
   <img alt="Python 3.9 or newer" src="https://img.shields.io/badge/Python-3.9%2B-1f3555?style=flat-square">
 </p>
 <p align="center">
@@ -104,13 +104,22 @@ flowchart TD
 
 ## 快速开始
 
-### 1. 导入 WorkBuddy
+### 1. 选择客户端并安装
 
-下载 [客户需求整理助手 v0.1.0 安装包](releases/0.1.0/customer-requirements-assistant-0.1.0.zip)，在 WorkBuddy 中打开：
+技能主体遵循 [Agent Skills 标准](https://agentskills.io/specification)，业务流程与脚本不依赖特定模型或客户端。提供两种安装包：
 
-**专家·技能·连接器 → 技能 → 添加技能 → 上传技能**
+- [**通用 Skill 包 · v0.2.0**](releases/0.2.0/customer-requirements-assistant-0.2.0.zip)：用于支持标准技能目录的客户端，或由其他Agent显式读取执行。
+- [**WorkBuddy 导入包 · v0.2.0**](releases/0.2.0/customer-requirements-assistant-workbuddy-0.2.0.zip)：包含WorkBuddy展示元数据，在客户端技能页面上传。
 
-选择 ZIP，查看平台检测结果并完成导入。安装包已经包含技能入口、运行脚本、模板和参考资料，无需重新压缩仓库。
+取得仓库后，可使用安装器选择目标客户端：
+
+```sh
+python3 tools/install.py --client codex --project /path/to/your-project
+```
+
+将`codex`替换为`claude`、`cursor`、`copilot`、`gemini`或`opencode`即可使用对应目录；用户级安装加`--scope user`并去掉`--project`。也支持`--dest /path/to/skills`自定义目录和`--dry-run`预览。安装后重新加载或新建会话，再选择技能。
+
+完整文件处理需要宿主提供文件读取、Python执行和任务目录写入能力；不具备执行能力时可使用Markdown整理模式。[查看各客户端安装路径、手动加载方法与验证状态](docs/compatibility.md)
 
 ### 2. 提供资料并开始整理
 
@@ -166,13 +175,13 @@ flowchart TD
 
 核心脚本需要 **Python 3.9+**，使用标准库完成基础读取、校验和 Markdown / CSV 输出。Word 导出使用 `python-docx`，PDF 读取使用 `pypdf`。优先使用宿主已有环境；缺少可选依赖时，报告限制并交付可用格式。
 
-[运行与故障处理](skill/customer-requirements-assistant/references/runtime.md) · [数据结构说明](skill/customer-requirements-assistant/references/schema.md) · [行业参考](skill/customer-requirements-assistant/references/industries.md)
+[运行与故障处理](skills/customer-requirements-assistant/references/runtime.md) · [数据结构说明](skills/customer-requirements-assistant/references/schema.md) · [行业参考](skills/customer-requirements-assistant/references/industries.md)
 
 <details>
 <summary>处理规模与使用边界</summary>
 
 - 单文件不超过 5 MiB，每批最多 20 个输入文件，累计最多 40 个来源、50 万字符；模型上下文不足时仍需分批阅读。
-- 包内脚本不发起网络请求，无需额外模型 API 密钥。需求理解由 WorkBuddy 模型完成，资料处理遵循宿主服务规则。
+- 包内脚本不发起网络请求，无需额外模型 API 密钥。需求理解由当前 Agent 模型完成，资料处理遵循宿主服务规则。
 - 校验器检查结构、精确引文、阿拉伯数字和状态一致性。说话人身份、否定条件、中文数词与语义是否准确，需要 AI 及人工复核。
 - 默认处理用户提供或授权的材料，不读取聊天账号、不发送消息、不自动报价或代替客户确认。
 - Word 跨设备打开时可能发生字体替换，交付前应检查实际版式。行业专业规范和既有承诺应以可核对的资料为准。
@@ -181,17 +190,18 @@ flowchart TD
 
 ## 开发与验证
 
-需求理解、结构化校验和文件生成分别承担明确职责：WorkBuddy 模型负责理解业务材料，数据协议保存需求与证据，Python 工具完成读取、检查和导出。
+需求理解、结构化校验和文件生成分别承担明确职责：Agent 模型负责理解业务材料，数据协议保存需求与证据，Python 工具完成读取、检查和导出。
 
 ```text
 customer-requirements-assistant/
-├── skill/customer-requirements-assistant/
+├── skills/customer-requirements-assistant/
 │   ├── SKILL.md           技能入口与执行流程
 │   ├── scripts/           资料读取、校验与文档生成
 │   ├── references/        数据协议、行业提示与运行指南
 │   └── templates/         数据模板与虚构培训示例
 ├── tests/                 自动测试与四行业固定样例
-├── tools/                 打包、解压验证与文档检查工具
+├── distribution/          WorkBuddy专用展示元数据
+├── tools/                 多客户端安装、双包构建与验证工具
 ├── evidence/              虚构案例及验证记录
 ├── releases/              独立安装包、文件清单与校验摘要
 └── memory-bank/           产品设计、实施计划与开发待办
@@ -205,13 +215,15 @@ python3 tools/build_release.py
 python3 tools/smoke_archive.py
 ```
 
+v0.2.0已通过34项自动测试、双包各4组解压运行，并完成Codex CLI显式发现与实际任务验证。详见[本版验证报告](evidence/0.2.0/verification.md)。各客户端的规范适配、目录安装与实际运行分别记录，不将标准兼容写成所有客户端均已实测。
+
 v0.1.0 已完成 24 项自动测试、四行业固定模型的解压运行验证，以及 macOS WorkBuddy V5.9.3 的导入和实际任务测试。完整依赖环境 24 项通过；标准库环境 22 项通过、2 项可选依赖测试跳过。四份样例 Word 与一份客户端实际 Word，共 12 页完成视觉检查。
 
 固定模型样例用于验证脚本和输出流程；独立模型抽取、客户端运行和真实用户试用分别记录。当前验证不等同于所有行业、文档和宿主环境的适用性证明。[查看完整验证范围](evidence/verification.md)
 
 ## 路线图与开源计划
 
-首版聚焦**资料整理、需求追溯、状态区分和文件交付**。后续计划围绕实际使用反馈完善：
+当前版本聚焦**跨客户端使用、资料整理、需求追溯、状态区分和文件交付**。后续计划围绕实际使用反馈完善：
 
 - 客户文档措辞、标题和版式优化。
 - 用户自有需求模板映射。
@@ -220,6 +232,6 @@ v0.1.0 已完成 24 项自动测试、四行业固定模型的解压运行验证
 
 **项目计划在发布后开源。** 开源前将补齐许可证、贡献说明与发布资料，具体许可条款以届时仓库中的 `LICENSE` 为准。目前安装包可用于导入验证，技能市场发布仍在准备中。
 
-[版本记录](CHANGELOG.md) · [产品设计](memory-bank/design.md) · [开发待办](memory-bank/todo.md) · [安装包校验摘要](releases/0.1.0/SHA256SUMS)
+[版本记录](CHANGELOG.md) · [产品设计](memory-bank/design.md) · [开发待办](memory-bank/todo.md) · [安装包校验摘要](releases/0.2.0/SHA256SUMS)
 
 <p align="center">Created by <a href="https://github.com/zcjunblog">zcjunblog</a> · <a href="https://github.com/zcjunblog/sitecraft">Sitecraft 官网设计 Skill</a></p>

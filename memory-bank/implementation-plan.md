@@ -4,7 +4,7 @@
 
 目标：交付独立 WorkBuddy ZIP，含模型工作流、结构化数据规范、资料读取、证据校验、Markdown/CSV/Word 导出、四行业样例和验证记录。
 
-方案：Python 3.9+ 标准库处理文本、DOCX 读取、数据校验和基础输出；python-docx 用于 Word，pypdf 用于 PDF 文本提取，两项可选并检测缺失。模型由 WorkBuddy 提供，不接额外模型 API。源码在 skill/customer-requirements-assistant。开发在当前专用项目的功能分支进行，保留用户熟悉的路径。
+方案：Python 3.9+ 标准库处理文本、DOCX 读取、数据校验和基础输出；python-docx 用于 Word，pypdf 用于 PDF 文本提取，两项可选并检测缺失。模型由 WorkBuddy 提供，不接额外模型 API。源码在 skills/customer-requirements-assistant。开发在当前专用项目的功能分支进行，保留用户熟悉的路径。
 
 ## 任务与接口
 

@@ -1,0 +1,39 @@
+test_client_installs_and_dry_run (test_distribution.DistributionTests.test_client_installs_and_dry_run) ... ok
+test_custom_destination_and_symlink_protection (test_distribution.DistributionTests.test_custom_destination_and_symlink_protection) ... ok
+test_custom_root_with_explicit_writable_work_directory (test_distribution.DistributionTests.test_custom_root_with_explicit_writable_work_directory) ... ok
+test_dotdot_cannot_target_repository_source (test_distribution.DistributionTests.test_dotdot_cannot_target_repository_source) ... ok
+test_reinstall_refuses_and_replace_preserves_backup (test_distribution.DistributionTests.test_reinstall_refuses_and_replace_preserves_backup) ... ok
+test_replacement_rejects_symlinked_backup_root (test_distribution.DistributionTests.test_replacement_rejects_symlinked_backup_root) ... ok
+test_standard_entrypoint_and_resources (test_distribution.DistributionTests.test_standard_entrypoint_and_resources) ... ok
+test_two_standalone_reproducible_packages (test_distribution.DistributionTests.test_two_standalone_reproducible_packages) ... ok
+test_user_scope_and_invalid_arguments_do_not_target_project (test_distribution.DistributionTests.test_user_scope_and_invalid_arguments_do_not_target_project) ... ok
+test_work_directory_cannot_be_scanned_skill_root (test_distribution.DistributionTests.test_work_directory_cannot_be_scanned_skill_root) ... ok
+test_confirmation_can_reference_previous_message (test_pipeline.PipelineTests.test_confirmation_can_reference_previous_message) ... ok
+test_confirmation_needs_evidence_and_suggestion_cannot_be_confirmed (test_pipeline.PipelineTests.test_confirmation_needs_evidence_and_suggestion_cannot_be_confirmed) ... ok
+test_customer_draft_omits_full_source_quotes (test_pipeline.PipelineTests.test_customer_draft_omits_full_source_quotes) ... ok
+test_docx_round_trip (test_pipeline.PipelineTests.test_docx_round_trip) ... ok
+test_duplicate_and_wrong_type (test_pipeline.PipelineTests.test_duplicate_and_wrong_type) ... ok
+test_empty_and_oversize (test_pipeline.PipelineTests.test_empty_and_oversize) ... ok
+test_explicit_source_acceptance_needs_quote (test_pipeline.PipelineTests.test_explicit_source_acceptance_needs_quote) ... ok
+test_four_industry_fixtures (test_pipeline.PipelineTests.test_four_industry_fixtures) ... ok
+test_ingest_output_never_overwrites (test_pipeline.PipelineTests.test_ingest_output_never_overwrites) ... ok
+test_malformed_conflict_refs (test_pipeline.PipelineTests.test_malformed_conflict_refs) ... ok
+test_missing_optional_word_is_explicit (test_pipeline.PipelineTests.test_missing_optional_word_is_explicit) ... ok
+test_new_number_rejected (test_pipeline.PipelineTests.test_new_number_rejected) ... ok
+test_question_changes_need_revision_note (test_pipeline.PipelineTests.test_question_changes_need_revision_note) ... ok
+test_reingest_stable_ids (test_pipeline.PipelineTests.test_reingest_stable_ids) ... ok
+test_render_blocks_invalid (test_pipeline.PipelineTests.test_render_blocks_invalid) ... ok
+test_render_nonoverwriting_and_csv_safe (test_pipeline.PipelineTests.test_render_nonoverwriting_and_csv_safe) ... ok
+test_revision_keeps_old_refs (test_pipeline.PipelineTests.test_revision_keeps_old_refs) ... ok
+test_revision_removal_and_source_retention (test_pipeline.PipelineTests.test_revision_removal_and_source_retention) ... ok
+test_scanned_pdf_reported (test_pipeline.PipelineTests.test_scanned_pdf_reported) ... ok
+test_source_required_fields (test_pipeline.PipelineTests.test_source_required_fields) ... ok
+test_sources_and_partial_failure (test_pipeline.PipelineTests.test_sources_and_partial_failure) ... ok
+test_title_not_duplicated (test_pipeline.PipelineTests.test_title_not_duplicated) ... ok
+test_unresolved_conflict_blocks_confirmation (test_pipeline.PipelineTests.test_unresolved_conflict_blocks_confirmation) ... ok
+test_valid_and_false_quote (test_pipeline.PipelineTests.test_valid_and_false_quote) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 1.125s
+
+OK
