@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-06",
+  "repository": "https://github.com/zcjunblog/customer-requirements-assistant",
+  "visibility": "public",
+  "license": "MIT",
+  "source_commit": "a1f7aebce12e079ce046770f7d957c86a7a86a6d",
+  "anonymous_repository_api_access": true,
+  "anonymous_files": [
+    {
+      "path": "README.md",
+      "anonymous_http_status": 200,
+      "sha256_matches_local": true,
+      "bytes": 17765
+    },
+    {
+      "path": "LICENSE",
+      "anonymous_http_status": 200,
+      "sha256_matches_local": true,
+      "bytes": 1066
+    },
+    {
+      "path": "releases/0.2.1/customer-requirements-assistant-0.2.1.zip",
+      "anonymous_http_status": 200,
+      "sha256_matches_local": true,
+      "bytes": 25557
+    },
+    {
+      "path": "releases/0.2.1/customer-requirements-assistant-workbuddy-0.2.1.zip",
+      "anonymous_http_status": 200,
+      "sha256_matches_local": true,
+      "bytes": 25984
+    },
+    {
+      "path": "docs/images/customer-requirements-banner.png",
+      "anonymous_http_status": 200,
+      "sha256_matches_local": true,
+      "bytes": 1516750
+    }
+  ]
+}

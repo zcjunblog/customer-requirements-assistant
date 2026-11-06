@@ -17,6 +17,8 @@
 
 审核入口：https://open.workbuddy.cn/skill/all
 
-仓库继续保持私有；公开范围、许可证与后续收费未在本次修改。
+历史：本次提审时仓库仍为私有，公开、许可证与收费不属于当时变更。
 
 2026-11-06后续授权：用户要求完善README、同步GitHub并直接开源，采用MIT；本轮不修改已发布的市场概述或既有提审包。GitHub最终公开状态见项目todo和开源核验记录。
+
+GitHub现状：2026-11-06已按用户授权公开并采用MIT，匿名源码与安装包访问通过；证据见[evidence/open-source](../../evidence/open-source/README.md)。这不改变上述平台回执或已发布概述。
