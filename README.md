@@ -6,8 +6,9 @@
 <p align="center"><strong>让每一项客户需求，都有依据、有边界、有明确的下一步。</strong></p>
 <p align="center">Customer Requirements Assistant<br>面向多种 Agent 客户端的跨行业需求整理 Skill</p>
 <p align="center">
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-2563eb?style=flat-square"></a>
   <img alt="Agent Skills" src="https://img.shields.io/badge/Agent_Skills-Portable-1f3555?style=flat-square">
-  <a href="releases/0.2.1/customer-requirements-assistant-0.2.1.zip"><img alt="Version 0.2.1" src="https://img.shields.io/badge/version-0.2.1-3668a0?style=flat-square"></a>
+  <a href="https://raw.githubusercontent.com/zcjunblog/customer-requirements-assistant/main/releases/0.2.1/customer-requirements-assistant-0.2.1.zip"><img alt="Version 0.2.1" src="https://img.shields.io/badge/version-0.2.1-3668a0?style=flat-square"></a>
   <img alt="Python 3.9 or newer" src="https://img.shields.io/badge/Python-3.9%2B-1f3555?style=flat-square">
 </p>
 <p align="center">
@@ -15,7 +16,8 @@
   <a href="#工作流程">工作流程</a> ·
   <a href="#实际案例">实际案例</a> ·
   <a href="#快速开始">快速开始</a> ·
-  <a href="#开发与验证">开发与验证</a>
+  <a href="#客户端与验证范围">客户端支持</a> ·
+  <a href="#参与贡献与许可证">参与贡献</a>
 </p>
 
 客户需求往往分散在聊天记录、会议纪要和方案附件里。交付内容需要反复核对，日期与数量可能前后变化，讨论中的建议也容易被误写成已经确定的安排。
@@ -96,9 +98,9 @@ flowchart TD
 | 讲义 | 保留客户已提出的交付要求，形式、份数与交付时间待确认。 |
 | 录播与答疑 | 标记为建议增项，未纳入客户承诺。 |
 
-本次运行形成 **8 条需求、3 个冲突、5 个集中问题**，生成 Word、Markdown 及内部追溯文件；8 条需求均保留待确认状态。
+v0.2.1 客户端案例形成 **8 条需求、2 个冲突、6 个集中问题**，生成 Word、Markdown 及内部追溯文件；8 条需求均保留待确认状态。
 
-[查看实际需求确认草稿](evidence/workbuddy-smoke/需求确认书.md) · [查看待确认问题](evidence/workbuddy-smoke/待确认问题.md) · [查看验证记录](evidence/verification.md)
+[查看实际需求确认草稿](evidence/0.2.1/workbuddy-smoke/需求确认书.md) · [查看待确认问题](evidence/0.2.1/workbuddy-smoke/待确认问题.md) · [查看验证记录](evidence/0.2.1/verification.md)
 
 该案例用于展示整理方式与真实文件产出。面向客户交付前，仍应审阅标题、内部意见措辞和敏感信息。
 
@@ -108,20 +110,37 @@ flowchart TD
 
 技能主体遵循 [Agent Skills 标准](https://agentskills.io/specification)，业务流程与脚本不依赖特定模型或客户端。提供两种安装包：
 
-- [**通用 Skill 包 · v0.2.1**](releases/0.2.1/customer-requirements-assistant-0.2.1.zip)：用于支持标准技能目录的客户端，或由其他Agent显式读取执行。
-- [**WorkBuddy 导入包 · v0.2.1**](releases/0.2.1/customer-requirements-assistant-workbuddy-0.2.1.zip)：包含WorkBuddy展示元数据，在客户端技能页面上传。
+- [**通用 Skill 包 · v0.2.1**](https://raw.githubusercontent.com/zcjunblog/customer-requirements-assistant/main/releases/0.2.1/customer-requirements-assistant-0.2.1.zip)：用于支持标准技能目录的客户端，或由其他Agent显式读取执行。
+- [**WorkBuddy 导入包 · v0.2.1**](https://raw.githubusercontent.com/zcjunblog/customer-requirements-assistant/main/releases/0.2.1/customer-requirements-assistant-workbuddy-0.2.1.zip)：包含WorkBuddy展示元数据，在客户端技能页面上传。
 
-取得仓库后，可使用安装器选择目标客户端：
+从源码安装，以 Codex 项目目录为例：
 
 ```sh
+git clone https://github.com/zcjunblog/customer-requirements-assistant.git
+cd customer-requirements-assistant
+python3 tools/install.py --client codex --project /path/to/your-project --dry-run
 python3 tools/install.py --client codex --project /path/to/your-project
 ```
+
+`/path/to/your-project`替换为实际项目路径。安装器只复制技能文件，不安装依赖、不更改账号或全局规则；已有同名安装时默认停止，显式`--replace`会先备份。
 
 将`codex`替换为`claude`、`cursor`、`copilot`、`gemini`或`opencode`即可使用对应目录；用户级安装加`--scope user`并去掉`--project`。也支持`--dest /path/to/skills`自定义目录和`--dry-run`预览。安装后重新加载或新建会话，再选择技能。
 
 完整文件处理需要宿主提供文件读取、Python执行和任务目录写入能力；不具备执行能力时可使用Markdown整理模式。[查看各客户端安装路径、手动加载方法与验证状态](docs/compatibility.md)
 
-### 2. 提供资料并开始整理
+### 2. 检查运行环境
+
+基础文本整理和 Markdown / CSV 输出只需 Python 3.9+。需要 Word 导出或读取文本 PDF 时，在仓库目录准备独立环境：
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r skills/customer-requirements-assistant/requirements-optional.txt
+.venv/bin/python skills/customer-requirements-assistant/scripts/requirements_tool.py doctor
+```
+
+让 Agent 使用检测通过的解释器运行技能。Windows 的虚拟环境解释器为`.venv\Scripts\python.exe`；其他路径以实际安装位置为准。Word 不可用时仍可生成 Markdown 与追溯表，报告会说明缺失的格式。
+
+### 3. 提供资料并开始整理
 
 新建任务，粘贴沟通文本或提供文件，然后说明目标：
 
@@ -138,7 +157,7 @@ python3 tools/install.py --client codex --project /path/to/your-project
 整理出需要与客户集中确认的问题。
 ```
 
-### 3. 根据反馈持续修订
+### 4. 根据反馈持续修订
 
 提供上一版需求数据、来源数据和补充沟通，继续说明：
 
@@ -188,6 +207,17 @@ python3 tools/install.py --client codex --project /path/to/your-project
 
 </details>
 
+## 客户端与验证范围
+
+| 接入方式 | 当前记录 |
+| --- | --- |
+| WorkBuddy | 已完成导入与虚构资料实际任务；v0.2.1最终包经平台解析，见[本版报告](evidence/0.2.1/verification.md) |
+| Codex | v0.2.0本机CLI完成技能发现与实际任务；v0.2.1完整脚本与分发回归通过 |
+| Claude Code、Cursor、Copilot、Gemini CLI、OpenCode | 提供目录安装与资源适配，尚未逐一完成真实客户端任务 |
+| 其他Agent | 可显式读取SKILL.md；根据宿主文件、Python和文档能力确定可用范围 |
+
+安装目录、技能发现和实际任务分别验证。各系统、客户端版本和复杂业务材料的效果需按实际环境复核；详见[兼容说明](docs/compatibility.md)。
+
 ## 开发与验证
 
 需求理解、结构化校验和文件生成分别承担明确职责：Agent 模型负责理解业务材料，数据协议保存需求与证据，Python 工具完成读取、检查和导出。
@@ -210,20 +240,14 @@ customer-requirements-assistant/
 运行测试与构建：
 
 ```sh
-python3 -m unittest discover -s tests -v
-python3 tools/build_release.py
-python3 tools/smoke_archive.py
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python tools/build_release.py --out outputs/release-preview
+.venv/bin/python tools/smoke_archive.py
 ```
 
-v0.2.1完成Word与Markdown版式优化，修复标题重复，增加首页状态概览，调整正文层级与分页。六份文档共16页已逐页检查，38项自动测试与双包解压运行通过。[查看本版验证](evidence/0.2.1/verification.md)。
+v0.2.1优化了Word与Markdown的标题、首页概览、正文层级和分页；四行业固定样例验证读取、校验与导出流程，客户端案例另行检查。工程测试、版式检查和真实任务的范围见[本版验证报告](evidence/0.2.1/verification.md)。脚本校验通过仍需复核语义、客户确认依据和对外措辞。
 
-v0.2.0已通过34项自动测试、双包各4组解压运行，并完成Codex CLI显式发现与实际任务验证。详见[本版验证报告](evidence/0.2.0/verification.md)。各客户端的规范适配、目录安装与实际运行分别记录，不将标准兼容写成所有客户端均已实测。
-
-v0.1.0 已完成 24 项自动测试、四行业固定模型的解压运行验证，以及 macOS WorkBuddy V5.9.3 的导入和实际任务测试。完整依赖环境 24 项通过；标准库环境 22 项通过、2 项可选依赖测试跳过。四份样例 Word 与一份客户端实际 Word，共 12 页完成视觉检查。
-
-固定模型样例用于验证脚本和输出流程；独立模型抽取、客户端运行和真实用户试用分别记录。当前验证不等同于所有行业、文档和宿主环境的适用性证明。[查看完整验证范围](evidence/verification.md)
-
-## 路线图与开源计划
+## 路线图
 
 当前版本聚焦**跨客户端使用、资料整理、需求追溯、状态区分和文件交付**。后续计划围绕实际使用反馈完善：
 
@@ -232,7 +256,15 @@ v0.1.0 已完成 24 项自动测试、四行业固定模型的解压运行验证
 - 图片聊天记录与扫描件支持。
 - 更多行业案例、复杂文档及跨平台验证。
 
-**项目计划在发布后开源。** 开源前将补齐许可证、贡献说明与发布资料，具体许可条款以届时仓库中的 `LICENSE` 为准。v0.2.1已提交WorkBuddy技能市场审核，当前尚未上线。[查看提审记录](docs/marketplace/submission.md)。
+## 参与贡献与许可证
+
+项目已开源，采用 [MIT 许可证](LICENSE)，可在遵守许可证的前提下使用、修改和分发。欢迎提交需求整理案例、字段与模板建议、文档改进和问题修复；具体流程见[贡献指南](CONTRIBUTING.md)。
+
+提交反馈时请使用虚构或充分脱敏的材料，注明版本、运行环境、复现步骤和预期结果。真实客户原文、内部追溯资料、账号信息及密钥不进入公开 Issue 或 PR。
+
+[提交问题或建议](https://github.com/zcjunblog/customer-requirements-assistant/issues) · [查看源码](https://github.com/zcjunblog/customer-requirements-assistant)
+
+GitHub开源独立于市场审核；WorkBuddy历史提审与后续状态以[平台记录](docs/marketplace/submission.md)为准。
 
 [版本记录](CHANGELOG.md) · [产品设计](memory-bank/design.md) · [开发待办](memory-bank/todo.md) · [安装包校验摘要](releases/0.2.1/SHA256SUMS)
 

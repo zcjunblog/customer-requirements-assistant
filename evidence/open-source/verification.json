@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-06",
+  "repository": "https://github.com/zcjunblog/customer-requirements-assistant",
+  "license": "MIT",
+  "stage": "ready_to_open_source",
+  "history": {
+    "scope": "all locally available Git refs, blobs and nested ZIP contents",
+    "git_objects_checked": 230,
+    "historical_blobs_checked": 152,
+    "zip_containers_checked_including_docx": 5,
+    "credential_patterns_absent": true,
+    "known_historical_noncredential_local_path_records": 1,
+    "current_path_records_redacted": true,
+    "commit_history_preserved": true
+  },
+  "current_tree": {
+    "files_checked": 115,
+    "developer_home_paths_absent": true,
+    "local_markdown_and_html_links_valid": true,
+    "private_runtime_paths_ignored": true,
+    "skill_source_and_distribution_metadata_unchanged": true
+  },
+  "tests": {
+    "full_dependencies": 38,
+    "passed": 38,
+    "skipped": 0
+  },
+  "archive_smoke": {
+    "profiles": 2,
+    "cases_per_profile": 4,
+    "passed": true,
+    "word_generated": true,
+    "pdf_revalidated_this_round": false
+  },
+  "existing_packages": [
+    {
+      "path": "releases/0.1.0/customer-requirements-assistant-0.1.0.zip",
+      "sha256": "743021da6012c2496e7166837e52f4ae9421a2818990ee273080a3a17cf0d0db",
+      "unchanged": true
+    },
+    {
+      "path": "releases/0.2.0/customer-requirements-assistant-0.2.0.zip",
+      "sha256": "e9ce3136ee03b708e918b1799796e14b9dcdb41c54df37e136ac1cd448790260",
+      "unchanged": true
+    },
+    {
+      "path": "releases/0.2.0/customer-requirements-assistant-workbuddy-0.2.0.zip",
+      "sha256": "933f015849b8f017b18c8fa116d5cb304a9f05f8978e000cb796e6160e810d87",
+      "unchanged": true
+    },
+    {
+      "path": "releases/0.2.1/customer-requirements-assistant-0.2.1.zip",
+      "sha256": "ce24bb46546e8f81b22e50b88406b9fac73c8f9e8824f40e95431a65f31ca7ed",
+      "unchanged": true
+    },
+    {
+      "path": "releases/0.2.1/customer-requirements-assistant-workbuddy-0.2.1.zip",
+      "sha256": "3511c468afde5d12ed915a11a2a82647bc591657f60068902d608a681a4a46a5",
+      "unchanged": true
+    }
+  ],
+  "marketplace_overview_modified": false,
+  "release_copy_rule": "Future user-facing overviews explain scenarios, capabilities, steps, outcomes and necessary conditions. Test/CI/acceptance details stay in engineering evidence."
+}
